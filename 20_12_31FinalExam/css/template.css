@@ -1,0 +1,231 @@
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  line-height: 60px;
+  padding: 15px 0;
+  transition: background-color .4s;
+}
+.navbar.invert{
+  background-color: var(--white);
+  box-shadow:4px -1px 5px rgba(0, 0, 0, .5);
+}
+.navbar.invert a{
+  transition: color .4s;
+  /* color: #6d6552; */
+  color: var(--black);
+}
+.navbar-nav .iconfont{
+  opacity: .6;
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.navbar-nav a{
+  display: block;
+  color: var(--white);
+  transition: .5s;
+}
+.navbar-nav li{
+  --animate-delay: 0.1s;
+}
+.navbar-nav li{
+  position: relative;
+}
+.navbar.invert li:hover a{
+  color: #c98a3c;
+}
+.navbar-nav li:hover a{
+  color: var(--black);
+}
+
+.navbar-nav li:not([data-excessive])::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  width: 0;
+  height: 2px;
+  background-color:var(--theme);
+  transition: .5s;
+  z-index: 2;
+}
+.navbar-nav li:hover::before{
+  width: 100%;
+  left: 0;
+}
+.navbar-nav li:hover ~ li::before{
+  left: 0;
+}
+li.dropdown{
+  position: relative;
+  /* display: none; */
+}
+li.dropdown:hover a{
+  background-color: var(--white);
+}
+li.dropdown > a::after{
+  content: "+";
+}
+li.dropdown:hover > a::after{
+  content: "-";
+}
+.dropdown-menu li{
+  --self-color: skyblue;
+}
+:root .dropdown-menu li:hover a{
+  color: var(--white);
+  background-color: var(--self-color);
+}
+.dropdown-menu li{
+  transition-duration: .6s;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.dropdown-menu li:nth-child(2){
+  transition-delay: 0.04s;
+}
+.dropdown-menu li:nth-child(3){
+  transition-delay: 0.05s;
+}
+.dropdown-menu li:nth-child(4){
+  transition-delay: 0.06s;
+}
+.dropdown-menu li:nth-child(5){
+  transition-delay: 0.07s;
+}
+.dropdown-menu li:nth-child(6){
+  transition-delay: 0.08s;
+}
+.dropdown-menu li:nth-child(7){
+  transition-delay: 0.09s;
+}
+.dropdown-menu li:nth-child(8){
+  transition-delay: 0.1s;
+}
+.dropdown-menu li:nth-child(odd){
+  left: 50%;
+}
+.dropdown-menu li:nth-child(even){
+  left: -50%;
+}
+
+
+li.dropdown:hover .group-members li{
+  box-shadow:0 1px 3px rgba(0, 0, 0, .5);
+  left: 0;
+  opacity: 1;
+  display: block;
+  visibility: visible;
+  pointer-events: all;
+}
+li.dropdown .dropdown-menu{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 62px;
+  visibility: hidden;
+  /* top: 75px; */
+}
+
+
+/* 侧边栏 */
+aside.sidebar{
+  position: fixed;
+  right: 10px;
+  bottom: 40px;
+  z-index: 99;
+}
+aside.sidebar .item + .item a{
+  border-top: none;
+}
+aside.sidebar a{
+  display: block;
+  font-size: 14px;
+  padding: 10px 13px;
+  border: 1px solid rgba(0,0,0,.1);
+  transition-duration: .4s;
+  transition-property: color, background-color;
+}
+aside.sidebar a:hover{
+  color: #fff;
+  background-color: rgba(0,0,0,.5);
+  /* border-color: rgba(160, 62, 62, 0.5); */
+}
+/* 侧边栏End */
+
+
+/* 页脚 */
+footer {
+  background-color: var(--gray2);
+}
+footer .ft-ct{
+  padding: 70px 0 68px;
+}
+footer .contact-way{
+  display: grid;
+  grid-template-columns: 20% 30% 50%;
+}
+
+.contact-hint .title{
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+.contact-way .title{
+  color: var(--gray3);
+}
+.contact-way .c-qrcode,
+.company-info .info-lists {
+  padding-top: 30px;
+}
+.company-info .info-lists li{
+  --animate-delay: 0.1s;
+  float: left;
+  width: 50%;
+  color: var(--gray4);
+  font-size: 14px;
+  transform-origin: 0% 50%;
+}
+.company-info .info-lists li:nth-child(n + 3){
+  margin-top: 12px;
+}
+
+.cr-statement{
+  padding: 10px 0;
+  font-size: 12px;
+  color: var(--gray3);
+}
+
+@media screen and (max-width: 1330px){
+  .contact-hint {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact-way .c-qrcode,
+  .company-info .info-lists {
+    padding-top: 3%;
+  }
+  footer > .container{
+    width: auto;
+  }
+  footer .contact-hint,
+  footer .c-medias{
+    text-align: center;
+  }
+  footer .contact-way{
+    grid-template-columns: 50% 50%;
+  }
+  footer .company-info{
+    margin-top: 15px;
+    grid-column-start: span 2;
+    justify-self: center;
+    text-align: center;
+  }
+
+}
+/* 页脚End */

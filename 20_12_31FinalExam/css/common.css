@@ -1,1 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul, ol{list-style: none;}
+img{vertical-align: middle;}
+a{text-decoration: none;}
+small.subtitle{font-size: 14px; color: #666;text-transform: capitalize;
+  font-family: "Times New Roman", Times, serif, HELVETICANEUELTPRO-THEX, "微软雅黑";}
+
+:root{
+  --theme: #c98a3c;
+  --theme2: #ecd384;
+  --white: #fff;
+  --black: #333;
+  
+  --gray: #efefef;
+  --gray2: #f3f3f3;
+  --gray3: #696969;
+  --gray4: #999;
+}
+
+h1, h2, h3, 
+h4, h5, h6{
+  font-weight: normal;
+}
+
+.flex{display: flex;}
+.flex-1{flex: 1;}
+.flex-col{flex-direction: column;}
+.j-center{justify-content: center;}
+.j-between{justify-content: space-between;}
+.j-around{justify-content: space-around;}
+.a-center{align-items: center;}
+
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+.text-center{text-align: center;}
+
+.clearfix:after,
+.clearfix:before{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container{
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.dot{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;  
+  overflow: hidden;
+}
+.dot-1{-webkit-line-clamp: 1;}
+.dot-2{-webkit-line-clamp: 2;}
+.dot-3{-webkit-line-clamp: 3;}
+.dot-4{-webkit-line-clamp: 4;}
 
