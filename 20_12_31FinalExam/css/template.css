@@ -4,6 +4,7 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 12;
   height: 60px;
   line-height: 60px;
   padding: 15px 0;
@@ -148,6 +149,7 @@ aside.sidebar a{
   font-size: 14px;
   padding: 10px 13px;
   border: 1px solid rgba(0,0,0,.1);
+  background: var(--white);
   transition-duration: .4s;
   transition-property: color, background-color;
 }
@@ -161,6 +163,7 @@ aside.sidebar a:hover{
 
 /* 页脚 */
 footer {
+  margin-top: 50px;
   background-color: var(--gray2);
 }
 footer .ft-ct{

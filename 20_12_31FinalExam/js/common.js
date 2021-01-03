@@ -10,7 +10,10 @@ $(function () {
   // 回到顶部
   backUp.click(() => {
     // backTop();
-    $("html, body").animate({ scrollTop: 0 });
+    // $("html, body").animate({ scrollTop: 0 });
+    $("html, body").scrollTop(0);
+
+
   });
 
   // function backTop() {
@@ -31,7 +34,25 @@ $(function () {
     item.style.setProperty("--self-color", randomColor2());
   });
 
+  let box = $("#carousel .carousel-inner");
+  let items = $(".carousel-inner .item");
+  let props = {
+    index: 0,
+    timing: 4000,
+    duration: 666,
+    len: items.length,
+    iWidth: items.eq(0).outerWidth(),
+    el: items.eq(0)
+  };
+
+  box.append(items.eq(0).clone(true));
+
+  // 开启轮播图
+  carousel(box, props);
 });
+
+
+
 
 // 随机生成颜色
 // function randomColor1(){

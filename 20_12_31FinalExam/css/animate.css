@@ -4100,3 +4100,23 @@
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
+
+
+
+@keyframes heartHint{
+  0% {
+      transform: translateY(-50%) scale(1);
+  }
+  25% {
+      transform: translateY(-50%) scale(.8);
+  }
+  50% {
+      transform: translateY(-50%) scale(1);
+  }
+  75% {
+      transform: translateY(-50%) scale(.8);
+  }
+  100%{
+    transform: translateY(-50%) scale(1);
+  }
+}
