@@ -1,0 +1,157 @@
+@charset "utf-8";
+body {
+	font: 14px/1.5 "微软雅黑";
+	margin: 0 auto;
+	padding: 0;
+
+}
+ul, li {
+	width: 1200px;
+	list-style: none;
+}/*清除列表项外观*/
+a {
+	text-decoration: none;
+}/*设置超链接初始无下划线效果*/
+.pr{position:relative;}
+.pa{position:absolute;}
+.fl {
+	float: left;
+}/*向左浮动*/
+.fr {
+	float: right;
+}/*向右浮动*/
+.proWarp {
+	height: 600px;
+	
+	padding: 50px 0px;
+}/*未设置宽度，该容器将继承父级属性，宽度为100%*/
+.iproWarp {
+	width: 1255px;
+	margin: 0px auto;
+	padding: 0px;
+}/*设置当前板块大小，宽度略大于原始宽度1200px，目的是从视觉角度考虑，较为美观*/
+
+.iprotitle {
+	padding: 0px 8px;
+}
+.iprotitle b {
+	color:aqua;
+	font-size: 30px;
+}
+.iprotitle b em {
+	color: #8d95a1;
+}
+.iprotitle p {
+	color: #fec400;
+	font-size: 16px;
+}
+
+.ipro_con {
+	padding-top: 35px;
+}
+.ipro_list ul li {
+	float: left;
+	width: 235px;
+	margin: 20px 8px;
+}
+.ipro_list ul li img {
+	width: 225px;
+	height: 177px;
+	line-height: 177px;
+	padding: 4px;
+	border: 1px solid #d3d4d8;
+background:rgba(33,171,107,1.00);
+}
+.ipro_list ul li span {
+	display: block;
+	text-align: center;
+	color:#26EAE7;
+}
+.ipro_list ul li span:hover {
+	color: #fec400;
+}
+
+
+.banner {
+	width: 100%;
+	height: 500px;
+	margin: 0px auto;
+
+}
+
+/*关于我们*/
+.icompany {
+	padding: 35px 0px;
+}/*设置此区块内边距*/
+.title {
+	height: 22px;
+	background: url( 33.jpg) repeat;
+	margin: 30px 0px;
+}/*区块分割线由图像平铺效果实现*/
+.title span {
+	left: 480px;
+	top: -25px;
+}/*设置绝对定位的位置参数*/
+.icompany .con {
+	padding: 25px 10px 0px;
+}/*设置此区块文字内容区域的内边距*/
+
+.icompany .con h3 {
+	width: 920px
+}
+.icompany .con h3 span {
+	font-size: 18px;
+	color: #000;
+}/*设置配饰文字标题的外观*/
+.icompany .con h3 p {
+	color: #5f5f5f;
+	line-height: 26px;
+	margin-top: 15px;
+	text-indent:2em;
+}/*设置配饰文字自身外观*/
+.icompany .con h3 p a {
+	margin-left: 10px;
+	color: #5f5f5f;
+}
+.icompany .con h3 p a:hover {
+	color: #e40000;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}/*清除浮动*/
+.clearfix {
+	zoom: 1;
+}
+  
+video{
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	height: auto;
+	width: auto;
+	z-index: -11;
+}
+source{
+	min-width: 100%;
+	min-height: 100%;
+	height: auto;
+	width: auto;
+}
+.group-intro{
+font-family: "微软雅黑";
+	font-size: 22px;
+	color: aqua;
+	 text-align: center;
+}
+.zz{
+	 display: block;
+    margin: auto;
+    width: 60%;
+	color: aqua;
+}
