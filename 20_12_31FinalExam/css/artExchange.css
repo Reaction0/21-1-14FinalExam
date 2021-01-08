@@ -1,0 +1,73 @@
+/* 艺术交流 */
+.art-exchange > .container{
+  width: auto;
+  max-width: 1200px;
+}
+.art-exchange .inner-box{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+
+  perspective: 800px;
+}
+@media screen and (max-width: 1200px){
+  .art-exchange .inner-box{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px){
+  .art-exchange .inner-box{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.art-exchange .inner-box .item{
+  border: 1px solid var(--gray);
+  box-shadow: 0 2px 4px rgb(0 0 0 / .2);
+  
+  transform-origin: 50% 50%;
+  transition: transform .4s, box-shadow .3s;
+}
+.act-pic-time{
+  position: relative;
+  overflow: hidden;
+  perspective: 800px;
+}
+.art-exchange img{
+  height: 200px;
+  transform-origin: 50% 50%;
+  transition: transform .4s;
+}
+.art-exchange .act-time{
+  padding: 6px 20px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: #c98a3cba;
+  color: var(--white);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%) rotateX(97deg);
+  transform-origin: 50% 100%;
+  transition: .4s;
+}
+.inner-box .item:hover {
+  box-shadow: 0 9px 10px rgb(0 0 0 / .2);
+  transform: translateY(-6px);
+}
+.inner-box .item:hover .act-time{
+  transform: translate(-50%) rotateX(0deg);
+}
+.art-exchange .activity-infos{
+  padding: 10px 15px;
+}
+.activity-infos .act-tit{
+  color: var(--gray3);
+}
+.activity-infos .act-ct{
+  word-break: break-all;
+  color: var(--gray4);
+  font-size: 14px;
+}
+
+
+/* 艺术交流End */

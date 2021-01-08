@@ -4,6 +4,7 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 12;
   height: 60px;
   line-height: 60px;
   padding: 15px 0;
@@ -28,6 +29,7 @@
   display: block;
   color: var(--white);
   transition: .5s;
+  text-shadow: 0 0 6px #d9822b;
 }
 .navbar-nav li{
   --animate-delay: 0.1s;
@@ -35,11 +37,18 @@
 .navbar-nav li{
   position: relative;
 }
-.navbar.invert li:hover a{
-  color: #c98a3c;
+:root .navbar.invert > li:hover a{
+  background-color: transparent;
+  color: var(--theme);
 }
-.navbar-nav li:hover a{
-  color: var(--black);
+.navbar.invert li a{
+  text-shadow: none;
+  transition: .3s;
+}
+.navbar-nav li:not([data-excessive]):hover a{
+  font-size: 20px;
+  color: #111d3b;
+  background-color: var(--theme);
 }
 
 .navbar-nav li:not([data-excessive])::before{
@@ -64,9 +73,14 @@ li.dropdown{
   position: relative;
   /* display: none; */
 }
-li.dropdown:hover a{
-  background-color: var(--white);
+li.dropdown:hover > a{
+  background-color: var(--theme);
 }
+li.dropdown .dropdown-menu a{
+  color: var(--black);
+  text-shadow: none;
+}
+
 li.dropdown > a::after{
   content: "+";
 }
@@ -76,7 +90,10 @@ li.dropdown:hover > a::after{
 .dropdown-menu li{
   --self-color: skyblue;
 }
-:root .dropdown-menu li:hover a{
+:root ul.dropdown-menu li a{
+  background-color: var(--white);
+}
+:root ul.dropdown-menu li:hover a{
   color: var(--white);
   background-color: var(--self-color);
 }
@@ -148,6 +165,7 @@ aside.sidebar a{
   font-size: 14px;
   padding: 10px 13px;
   border: 1px solid rgba(0,0,0,.1);
+  background: var(--white);
   transition-duration: .4s;
   transition-property: color, background-color;
 }
@@ -161,6 +179,7 @@ aside.sidebar a:hover{
 
 /* 页脚 */
 footer {
+  margin-top: 50px;
   background-color: var(--gray2);
 }
 footer .ft-ct{
@@ -229,3 +248,38 @@ footer .contact-way{
 
 }
 /* 页脚End */
+
+
+.sub-box {
+  max-width: 480px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--gray2);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.sub-box::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  border-left: 10px solid var(--white);
+  border-right: 10px solid var(--white);
+  left: 50%;
+  margin-left: -15px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--theme);
+
+  /* 以下代码 非常消耗性能 */
+  /* animation: cColor 2s infinite alternate-reverse; */
+}
+
+@keyframes cColor {
+  0% {
+    background-color: hsl(0 55% 29%);
+  }
+
+  100% {
+    background-color: hsl(200deg 55% 29%);
+  }
+}

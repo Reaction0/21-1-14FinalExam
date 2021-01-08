@@ -1,0 +1,107 @@
+
+
+.china-explain > .container{
+  width: auto;
+  max-width: 1200px;
+}
+.china-explain .inner-box{
+  font-family: "宋体";
+  text-indent: 2em;
+  line-height: 1.8;
+  color: var(--gray3);
+}
+
+
+/* 瓷器欣赏 */
+.china-appreciate > .container{
+  width: auto;
+  max-width: 1200px;
+}
+.china-appreciate .inner-box{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.china-appreciate .inner-box .item + .item{
+  margin-top: 80px;
+}
+.china-appreciate .item:hover{
+  box-shadow: 0px 0px 16px rgba(12, 3, 6, 0.3);
+}
+.china-appreciate .item:nth-child(odd) {
+  margin-right: 100px;
+}
+.china-appreciate .item:nth-child(even) {
+  margin-left: 100px;
+}
+.china-appreciate .item:nth-child(odd) .ct-box{
+  flex-direction: row-reverse;
+}
+.china-appreciate .ct-box{
+  --line-right-c: #fd79a8;
+  --line-left-c: #0984e3;
+
+  position: relative;
+  border: 5px solid var(--gray);
+}
+.china-appreciate .ct-box::after,
+.china-appreciate .ct-box::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  transition: .6s;
+}
+.china-appreciate .ct-box::after{
+  bottom: -5px;
+  right: -5px;
+  color: var(--line-left-c);
+  border-right: 5px solid;
+  border-bottom: 5px solid;
+}
+.china-appreciate .ct-box::before{
+  top: -5px;
+  left: -5px;
+  color: var(--line-right-c);
+  border-left: 5px solid;
+  border-top: 5px solid;
+}
+.china-appreciate .item:hover .ct-box::after,
+.china-appreciate .item:hover .ct-box::before{
+  width: 101%;
+  height: 103%;
+}
+.china-infos > h3.name{
+  margin-bottom: 15px;
+}
+.china-infos > h3::after{
+  content: "";
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  width: 60px;
+  height: 2px;
+  background-color: var(--gray2);
+}
+.china-infos > .intro-ct{
+  color: var(--gray4);
+}
+.china-appreciate .item:nth-child(2n - 1) .product-box{
+  transform: translate(40px, -50px);
+}
+.china-appreciate .item:nth-child(2n) .product-box{
+  transform: translate(-40px, -50px);
+}
+.china-appreciate .product-box{
+  flex: 0 0 40%;
+  max-height: 320px;
+  overflow-y: scroll;
+  position: relative;
+  z-index: 1;
+}
+.china-appreciate .item:hover .product-box{
+  transform: translate(0);
+}
+.china-appreciate .product-box::-webkit-scrollbar{
+  display: none;
+}

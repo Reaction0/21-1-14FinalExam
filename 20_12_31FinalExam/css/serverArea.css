@@ -1,0 +1,315 @@
+@font-face {
+  font-family: "电商字体";
+  src: url("../fonts/电商字体.TTF");
+}
+
+canvas.server-balls {
+  margin: 0;
+  padding: 0;
+  touch-action: none;
+  position: absolute;
+  z-index: 3;
+}
+
+h1.title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.header-company-name{
+  --perX: 0;
+  --perY: 0;
+
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.wenzi {
+  position: absolute;
+  width: 650px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  margin-left: -325px;
+  margin-top: -150px;
+  transition: transform .4s ease-out;
+  transform: translate(calc(80px * var(--perX)), calc(80px * var(--perY)));
+}
+
+.wenzi1 {
+  font-family: "电商字体";
+  font-size: 150px;
+  color: #E7982E;
+
+}
+
+.wenzi2 {
+  font-family: "电商字体";
+  font-size: 83px;
+  color: #E7982E;
+}
+
+.tip-kpi{
+  font-size: 18px;
+  font-family: 黑体;
+  color: var(--gray3);
+  padding: 20px 0;
+}
+
+
+
+
+/* 服务范围2 */
+.server-scope>.container {
+  width: auto;
+  max-width: 1200px;
+}
+
+.server-scope .more-btn {
+  --animate-delay: 0.1s;
+}
+
+.server-scope .inner-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.server-scope .item+.item {
+  border-left: 1px solid var(--gray2);
+}
+
+.server-scope .item {
+  transition: color .3s, background-color .2s;
+}
+
+.server-scope .item:hover {
+  color: var(--colour);
+  filter: drop-shadow(0 0px 0px var(--colour));
+}
+
+.server-scope .item:nth-child(1) {
+  --colour: #2d2a3b;
+}
+
+.server-scope .item:nth-child(1) i {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.server-scope .item:nth-child(1) i::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  width: 70px;
+  height: 30px;
+  background-color: rgba(102, 105, 255, .1);
+  background-blend-mode: darken;
+  transform: translate(-100%, -220%) skewY(-45deg);
+}
+
+.server-scope .item:nth-child(1):hover i::after {
+  animation: clearSuit 1s infinite;
+}
+
+@keyframes clearSuit {
+  100% {
+    transform: translate(0%, 0%) skewY(-45deg);
+  }
+}
+
+
+
+.server-scope .item:nth-child(2) {
+  --colour: #fc0938;
+}
+
+.server-scope .item:nth-child(2) i::after {
+  content: "\e62f";
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  animation: spinShield 4s linear infinite paused;
+}
+
+.server-scope .item:nth-child(2) i::before {
+  transition: .4s;
+}
+
+/* .server-scope .item:nth-child(2) {
+  perspective: 800px;
+} */
+/* .server-scope .item:nth-child(2):hover i{
+  display: block;
+  transform: rotateY(30deg);
+  transform-origin: 50% 50%;
+} */
+.server-scope .item:nth-child(2):hover i::after {
+  /* top: 10px;
+  left: 40px; */
+  top: 20px;
+  left: 0px;
+  visibility: visible;
+
+  /* animation: spinShield 4s .5s linear infinite reverse; */
+  animation-play-state: running;
+}
+
+/* .server-scope .item:nth-child(2):hover i::before{
+  filter: drop-shadow(-40px 10px 0 var(--colour));
+} */
+
+@keyframes spinShield {
+
+  0%,
+  100% {
+    top: 20px;
+    left: 0px;
+    transform: scaleY(1);
+    z-index: 2;
+    color: var(--colour);
+  }
+
+  25% {
+    top: 10px;
+    left: -40px;
+    transform: scale(1);
+  }
+
+  50% {
+    top: -20px;
+    left: 0px;
+    transform: scale(.86);
+  }
+
+  75% {
+    top: 10px;
+    left: 40px;
+    z-index: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* 
+@keyframes spinShield{
+  0%, 100%{
+    top: 10px;
+    left: 40px;
+    transform: scaleY(1);
+    z-index: 2;
+  }
+
+  25%{
+    top: -20px;
+    left: 0px;
+    transform: scale(.9);
+  }
+  
+  50%{
+    top: 10px;
+    left: -40px;
+    transform: scale(1);
+  }
+  
+  75%{
+    top: 20px;
+    left: 0px;
+    z-index: 1;
+    transform: scale(1.1);
+  }
+} 
+*/
+
+.server-scope .item:nth-child(3) {
+  --colour: #ffae00;
+}
+
+.server-scope .item:nth-child(3) i::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -3px;
+  margin-top: -3px;
+  transform: scale(0) rotate(0deg);
+  box-shadow: 0 34px 0 var(--colour), 0 -34px 0 var(--colour), -34px 0 0 var(--colour), 34px 0 0 var(--colour);
+
+
+  /* 0 34px 0 var(--colour), 0 -34px 0 var(--colour)
+  ,-34px 0 0 var(--colour), 34px 0 0 var(--colour)
+  
+  ,-17px 24px 0 var(--colour), -15px -18px 0 var(--colour)
+  ,13px -18px 0 var(--colour), 17px 25px 0 var(--colour) */
+
+  /*   
+  0 34px 0 var(--colour), 0 -34px 0 var(--colour)
+  ,-34px 0 0 var(--colour), 34px 0 0 var(--colour)
+  
+  ,-28px 28px 0 var(--colour), -28px -28px 0 var(--colour)
+  ,28px -28px 0 var(--colour), 28px 28px 0 var(--colour); */
+
+
+
+  transition: .4s;
+}
+
+.server-scope .item:nth-child(3):hover i::after {
+  transform: scale(1) rotate(0deg);
+  animation: iconsAni 10s .4s infinite linear;
+}
+
+@keyframes iconsAni {
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+.server-scope .item>i {
+  position: relative;
+  font-size: 40px;
+}
+
+.server-scope .item:hover i {
+  color: var(--colour);
+}
+
+.server-scope .server-item {
+  margin-top: 13px;
+}
+
+.server-scope .server-purpose {
+  color: var(--gray4);
+  font-size: 14px;
+}
+
+.server-scope .server-item::after {
+  content: "";
+  margin-top: 10px;
+  display: block;
+  margin: 12px auto 8px;
+  width: 100px;
+  height: 1px;
+  background-color: var(--gray2);
+  transition: width .3s, background-color .2s;
+}
+
+
+.server-scope .item:hover .server-item::after {
+  width: 30%;
+  background-color: var(--colour);
+}
+
+/* 服务范围2End */

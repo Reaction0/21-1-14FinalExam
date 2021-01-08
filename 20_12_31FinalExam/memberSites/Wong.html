@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="./../css/common.css">
     <link rel="stylesheet" href="./../css/template.css">
     <link rel="stylesheet" href="./../css/animate.css">
-    
+    <link rel="stylesheet" href="./../css/wong.css">
+
     <link rel="stylesheet" href="./../fontIcon/iconfont.css">
+    <link rel="stylesheet" href="./fontIcon/iconfont.css">
     <title>广州市正唐文化传播有限公司</title>
 </head>
 
-<body>
+<body class="wong-body">
 
     <!-- 头部 -->
     <header class="navbar">
@@ -21,23 +23,32 @@
             <nav>
 
                 <ul class="navbar-nav flex">
-                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-1s"><a href="./../index.html"><i class="iconfont icon-yemian"></i>首页</a></li>
-                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-2s"><a href="./../chinaShows.html"><i class="iconfont icon-ciqi"></i>瓷器说明</a></li>
-                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-3s"><a href="./../proShow.html"><i class="iconfont icon-icon-prize1"></i>展示产品</a></li>
-                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-4s"><a href="./../aboutUs.html"><i class="iconfont icon-guanyuwomen"></i>关于我们</a></li>
-                    <li class="flex-1 text-center animate__animated animate__zoomIn animate__delay-9s c-logo" data-excessive>
+                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-1s"><a
+                            href="./../index.html"><i class="iconfont icon-yemian"></i>首页</a></li>
+                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-2s"><a
+                            href="./../chinaShows.html"><i class="iconfont icon-ciqi"></i>瓷器说明</a></li>
+                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-3s"><a
+                            href="./../proShow.html"><i class="iconfont icon-icon-prize1"></i>展示产品</a></li>
+                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-4s"><a
+                            href="./../aboutUs.html"><i class="iconfont icon-guanyuwomen"></i>关于我们</a></li>
+                    <li class="flex-1 text-center animate__animated animate__zoomIn animate__delay-9s c-logo"
+                        data-excessive>
                         <h1>
                             <a href="./../index.html"><img src="./../images/logo/logo2.svg" alt="Logo" height="60"></a>
                         </h1>
                     </li>
-                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-5s"><a href="./../serverArea.html"><i class="iconfont icon-fuwu"></i>服务范围</a></li>
-                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-6s"><a href="./../artExchange.html"><i class="iconfont icon-jiaoliu1"></i>艺术交流</a></li>
-                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-7s"><a href="./../groupIntro.html"><i class="iconfont icon-jieshao"></i>小组介绍</a></li>
-                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-8s dropdown" data-excessive>
+                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-5s"><a
+                            href="./../serverArea.html"><i class="iconfont icon-fuwu"></i>服务范围</a></li>
+                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-6s"><a
+                            href="./../artExchange.html"><i class="iconfont icon-jiaoliu1"></i>艺术交流</a></li>
+                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-7s"><a
+                            href="./../groupIntro.html"><i class="iconfont icon-jieshao"></i>小组介绍</a></li>
+                    <li class="flex-1 text-center animate__animated animate__bounceIn animate__delay-8s dropdown"
+                        data-excessive>
                         <a href="javascript:;">
                             <i class="iconfont icon-chengyuan"></i>小组成员
                         </a>
-                        		 			
+
                         <!-- 小组成员 -->
                         <ul class="group-members dropdown-menu">
                             <li class="item"><a href="./Wong.html">王旭敏</a></li>
@@ -59,14 +70,208 @@
     <!-- 主要内容 -->
     <div class="wrapper">
 
-        <!-- ！！！！！在此编写自己负责的内容！！！！！！ -->
-        
+        <!-- 个人介绍 -->
+        <div class="self-header flex a-center j-center">
+
+            <div class="self-intro">
+
+                <div class="self-box text-center">
+                    <div class="self-avatar">
+                        <img src="../images/avatar/doraemon/head.png" class="handsome-avator" alt="Wong">
+                    </div>
+                    <img src="../images/avatar/decorate/avatar-decor.png" class="hanging-drop">
+                    <div class="dynamic-sentence" data-sentences="['Wong!', '王 旭 敏', 'Web Designer']">
+                        Wong
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Draw -->
+            <div class="drawing-ball">
+                <canvas class="generate-ball"></canvas>
+            </div>
+            <!-- Draw -->
+
+        </div>
+        <!-- 个人介绍End -->
+
+        <!-- 时间轴 -->
+        <div class="time-line module-box oh">
+            <div class="container">
+
+                <div class="inner-box">
+
+                    <ul class="honor-items">
+
+                        <li class="item flex a-center j-between">
+                            <section class="explain-item">
+                                <h3>2018年6月</h3>
+                                <div class="mt-10">参加全国职业院校信息技术技能大赛"手机游戏模块开发"</div>
+                            </section>
+                            <div class="time-item text-center">
+                                <span class="time-num"></span>
+                            </div>
+                            <div class="honor-item">
+                                <img src="../images/competition01.jpg" class="img-responsive" alt="About Pic">
+                            </div>
+                        </li>
+
+                        <li class="item flex a-center j-between">
+                            <section class="explain-item">
+                                <h3>2019年3月</h3>
+                                <div class="mt-10">参加虚拟现实(VR)制作与应用</div>
+                            </section>
+                            <div class="time-item text-center">
+                                <span class="time-num"></span>
+                            </div>
+                            <div class="honor-item">
+                                <img src="../images/pexels-tim-gouw-5650642.jpg" class="img-responsive" alt="About Pic">
+                            </div>
+                        </li>
+
+                        <li class="item flex a-center j-between">
+                            <section class="explain-item">
+                                <h3>2019年7月</h3>
+                                <div class="mt-10">参加全国职业院校信息技术技能大赛"移动应用开发与服务"</div>
+                            </section>
+                            <div class="time-item text-center">
+                                <span class="time-num"></span>
+                            </div>
+                            <div class="honor-item">
+                                <img src="../images/TB18ra0RhD1gK0jSZFsXXbldVXa-1151-554.png" class="img-responsive"
+                                    alt="About Pic">
+                            </div>
+                        </li>
+
+                        <li class="item flex a-center j-between">
+                            <section class="explain-item">
+                                <h3>2020年10月</h3>
+                                <div class="mt-10">参加广东省职业院校”Web前端开发”</div>
+                            </section>
+                            <div class="time-item text-center">
+                                <span class="time-num"></span>
+                            </div>
+                            <div class="honor-item">
+                                <img src="../images/20-10-24.jpg" class="img-responsive" alt="About Pic">
+                            </div>
+                        </li>
+
+                        <li class="item flex a-center j-between">
+                            <section class="explain-item">
+                                <h3>2020年10月</h3>
+                                <div class="mt-10">进入广东科贸职业学院 - 信息与自动化学院</div>
+                            </section>
+                            <div class="time-item text-center">
+                                <span class="time-num"></span>
+                            </div>
+                            <div class="honor-item">
+                                <img src="../images/10-27.jpg" class="img-responsive" alt="About Pic">
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- 时间轴End -->
+
+        <!-- 个人信息 -->
+        <div class="blog-sites module-box">
+            <div class="container">
+
+                <section class="title text-center wow showIn">
+                    <h2 class="observe-object">个人信息</h2>
+                    <div class="sub-box">
+                        <small class="subtitle uppercase">personal infomation</small>
+                    </div>
+                </section>
+
+                <div class="inner-box mt-30">
+                    <!-- github、codepen、email、iphone、youtube、qq、address、time -->
+
+                    <div class="item text-center">
+                        <i class="iconfont icon-qq item-icon"></i>
+                        <div class="info-brief">
+                            <a href="https://www.baidu.com">1948293844</a>
+                        </div>
+                    </div>
+
+                    <div class="item text-center">
+                        <i class="iconfont icon-shijian item-icon"></i>
+                        <div class="info-brief now-time">00:00:00</div>
+                        <script>
+                            {
+                                let patternZero = item => item > 10 ? item : "0" + item;
+
+                                let time, formatTime;
+
+                                setInterval(() => {
+                                    time = new Date();
+                                    formatTime =
+                                        `${patternZero(time.getHours())}:${patternZero(time.getMinutes())}:${patternZero(time.getSeconds())}`;
+                                    document.querySelector(".now-time").innerHTML = formatTime;
+                                }, 1000);
+
+
+                            };
+                        </script>
+                    </div>
+
+                    <div class="item text-center">
+                        <i class="iconfont icon-iPhonedaxiaoxiangsunormalsezhiFhoversezhiF item-icon"></i>
+                        <div class="info-brief">
+                            <a href="https://www.baidu.com">1948293844</a>
+                        </div>
+                    </div>
+                    
+                    <div class="item text-center">
+                        <i class="iconfont icon-github2 item-icon"></i>
+                        <div class="info-brief">
+                            <a href="http://github.com/">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="item text-center">
+                        <i class="iconfont icon-you-tube item-icon"></i>
+                        <div class="info-brief">
+                            <a href="https://youtube.com/">Youtube</a>
+                        </div>
+                    </div>
+
+                    <div class="item text-center">
+                        <i class="iconfont icon-email item-icon"></i>
+                        <div class="info-brief">
+                            <a href="https://www.baidu.com">1948293844@qq.com</a>
+                        </div>
+                    </div>
+
+                    <div class="item text-center">
+                        <i class="iconfont icon-icon010 item-icon"></i>
+                        <div class="info-brief">
+                            <a href="http://www.gdkm.edu.cn/">广东科贸职业学院</a>
+                        </div>
+                    </div>
+
+                    <div class="item text-center">
+                        <i class="iconfont icon-codepen item-icon"></i>
+                        <div class="info-brief">
+                            <a href="https://codepen.io/">Codepen</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- 个人信息End -->
+
     </div>
     <!-- 主要内容End -->
 
-    <img src="./../images/bg.jpg" width="100%" alt="">
-
-    <p style="height: 3000px;"></p>
 
     <!-- 侧边栏 -->
     <aside class="sidebar">
@@ -115,7 +320,7 @@
             </div>
 
         </div>
-        
+
     </footer>
     <!-- 页脚End -->
 
@@ -128,12 +333,16 @@
     <script src="./../js/jquery.js"></script>
     <script src="./../js/wow.js"></script>
     <script src="./../js/common.js"></script>
+    <script src="./js/mouseDir.js"></script>
+    <script src="./js/wong.js"></script>
+    <script src="./js/balls.js"></script>
 
     <script>
         let wow = new WOW();
         wow.init();
         console.log(wow);
     </script>
+
 </body>
 
 </html>
