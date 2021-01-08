@@ -21,12 +21,8 @@ $(function () {
   //   $(window).scrollTop(sVal - (sVal / 9));
   //   if (sVal > 0)requestAnimationFrame(backTop);
   // };
+  // 回到顶部End
 
-
-  // $(".navbar-nav .dropdown").children(".dropdown-menu").slideUp();
-  // $(".navbar-nav .dropdown").click(function (){
-  //   $(this).children(".dropdown-menu").slideDown();
-  // });
 
 
   $(".group-members > li").each((idx, item) => {
@@ -36,21 +32,29 @@ $(function () {
 
   let box = $("#carousel .carousel-inner");
   let items = $(".carousel-inner .item");
-  let props = {
+  let props = {};
+  props = {
     index: 0,
-    timing: 4000,
-    duration: 666,
+    timing: 3000,
+    duration() {
+      return (this.timing * 0.2);
+    },
     len: items.length,
     iWidth: items.eq(0).outerWidth(),
     el: items.eq(0)
   };
 
-  box.append(items.eq(0).clone(true));
+  // box.append(items.eq(0).clone(true));
 
   // 开启轮播图
-  carousel(box, props);
+  // box[0] && carousel(box, props);
 });
 
+
+
+function random(min, max) {
+  return Math.random() * (max - min) + min;
+};
 
 
 
@@ -76,5 +80,35 @@ function scrollDeal() {
   } else {
     $(".navbar").removeClass("invert");
     $(".back-up").hide();
+  }
+}
+
+
+// 鼠标操纵物体
+class operationMotion {
+  constructor(el, dir = 1) {
+    this.el = el;
+    this.dir = dir; // 是否与鼠标互为反方向 -1 || 1
+    this.iW = window.innerWidth;
+    this.iH = window.innerHeight;
+  }
+
+  getXY(event) {
+    let xI = event.clientX / (this.iW / 2) - 1;
+    let yI = event.clientY / (this.iH / 2) - 1;
+
+    return {
+      xI,
+      yI
+    };
+  }
+
+  setXY(event) {
+    let vals = this.getXY(event);
+
+    this.el.css({
+      "--perX": this.dir * vals.xI,
+      "--perY": this.dir * vals.yI
+    });
   }
 }

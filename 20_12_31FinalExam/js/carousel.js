@@ -1,41 +1,50 @@
 function carousel(box, props) {
-  let { el, index, iWidth, len, timing, duration } = props;
+  let {
+    el,
+    index,
+    iWidth,
+    len,
+    timing,
+    duration
+  } = props;
   let ctrlBtns = $(".carousel .carousel-control");
-  let indicators = $(".carousel-indicators li");
-  let timer, progress;
+  let indicators = $(".carousel-indicators li"),
+    iChild = indicators.children("i");
 
   $(window).resize(() => {
     iWidth = el.outerWidth();
   });
 
-  intervalRequest();
-
 
   // 箭头
   ctrlBtns.click(function () {
     let dir = $(this).data("dir");
+
+    // 更新索引
     moveControl(dir);
 
-    otherMove();
-  });
+    // 还原
+    iChild.stop();
+    iChild.width(0);
 
-  // 指示器
-  indicators.click(function () {
-    index = Number($(this).data("slide-to")) * -1;
-
-    otherMove();
-  });
-
-  function otherMove() {
-    indicators.children("i").stop();
-    intervalRequest();
-    indicators.children("i").width(0);
-
+    // 更新活动对象
     box.stop().animate({
       left: `${index * iWidth}px`
     });
-  }
 
+    // 再次运行轮子
+    intervalRequest();
+  });
+
+  // 指示器
+  // indicators.click(function () {
+  //   index = Number($(this).data("slide-to")) * -1;
+
+  //   otherMove();
+  // });
+
+
+  // 更新索引 & 无缝轮播的控制
   function moveControl(dir) {
     if (dir == "right") {
       if (index <= -len) {
@@ -53,59 +62,26 @@ function carousel(box, props) {
 
   };
 
-  function intervalRequest() {
-    timer && clearInterval(timer);
+  intervalRequest();
 
-    indicators.children("i").eq(Math.abs(index <= -5 ? 0 : index)).stop(false, false).animate({
+  function intervalRequest(dir = "right") {
+    console.log("我还在运行");
+    iChild.eq(Math.abs(index <= -5 ? 0 : index)).animate({
       width: "100%"
-    }, timing, () => {
+    }, timing, "linear", () => {
+
+      moveControl(dir);
+
+      iChild.width(0);
 
       console.log("Callback:" + index);
-
-      indicators.children("i").css({
-        width: 0
-      });
-
       box.stop().animate({
         left: `${index * iWidth}px`
-      }, duration);
-
-    });
-
-    // 自动轮播
-    timer = setInterval(() => {
-      moveControl("right");
+      }, props.duration());
 
       intervalRequest();
-    }, timing);
+    });
 
   };
-  // function intervalRequest(idx) {
-  //   timer && clearInterval(timer);
-  //   progress && clearInterval(progress);
-  //   let nowTamp = 0;
-  //   let percent = 0;
-  //   let index = idx == -5 ? 0 : idx;
-  //   index = Math.abs(index);
-
-  //   indicators.css("--percent-next", 0);
-
-  //   timer = setInterval(() => {
-  //     percent = 0;
-  //     nowTamp = 0;
-  //     moveControl("right");
-  //   }, timing);
-
-
-  //   progress = setInterval(() => {
-  //     nowTamp += 1;
-
-  //     percent = (nowTamp / duration) * 100;
-  //     indicators.eq(index).css("--percent-next", `${percent}%`);
-  //   }, 6);
-  // };
-
-
 
 };
-

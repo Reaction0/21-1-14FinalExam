@@ -29,8 +29,3 @@ $(function (){
 
   objs.each((idx, item) => io.observe(item));
 });
-
-
-function observeStart(){
-
-}
