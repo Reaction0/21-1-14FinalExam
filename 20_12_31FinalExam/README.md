@@ -53,3 +53,55 @@ banner -- banner中
 5. 关于我们-吴嘉豪
 6. 服务范围-郭亮凯
 7. 艺术交流 - 黄建熙
+
+
+
+# 页面特点
+
+页面宽度变化  -  响应。
+
+
+
+# 备选网站
+
+第一个备选网站：
+http://www.cssmoban.com/preview/index.html?url=http://demo.kangjingept.com:8020/cssthemes6/12.30ZF27/index.html&id=16448
+
+第二个备选网站：
+http://www.cssmoban.com/preview/index.html?url=http://demo.kangjingept.com:8020/cssthemes6/12.30ZF11/index.html&id=16402
+
+第三个备选网站：
+http://www.cssmoban.com/preview/index.html?url=http://demo.kangjingept.com:8020/cssthemes6/zly_20201226_21/index.html&id=16370
+
+第四个备选网站：
+https://sc.chinaz.com/mobandemo.aspx?downloadid=202084341659
+
+第五个备选网站：
+http://ssbooks.cn/hzlc
+
+http://www.cssmoban.com/preview/index.html?url=http://demo.kangjingept.com:8020/cssthemes6/12.30ZF27/index.html&id=16448
+
+
+
+# 基本标签结构
+
+```html
+<!-- 团队介绍 -->
+<div class="team-introduction module-box">
+  <div class="container">
+    <section class="title text-center wow showIn">
+      <h2 class="observe-object">团队介绍</h2>
+      <div class="sub-box">
+        <small class="subtitle uppercase">aboutus</small>
+      </div>
+    </section>
+
+    <div class="inner-box mt-30">
+
+    </div>
+
+  </div>
+</div>
+<!-- 团队介绍End -->
+```
+
