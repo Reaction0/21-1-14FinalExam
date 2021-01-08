@@ -1,0 +1,62 @@
+/* 产品展示 */
+.product-display .pros-box > ul{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 40px;
+}
+.pros-box img{
+	width: 100%;
+	height: 550px;
+	transform-origin: 50% 100%;
+	transition: transform .3s ease-out;
+}
+.pros-box li{
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 10px rgb(0 0 0 / .6);
+	transition: .2s .5s;
+}
+.intro-item {
+	padding: 30px 20px;
+}
+.intro-item > * + *{
+	margin-top: 20px;
+}
+.intro-item h3{
+	color: var(--white);
+}
+.intro-item .china-brief{
+	color: var(--gray2);
+	text-align: center;
+}
+.china-brief .china-ct{
+	display: inline-block;
+}
+.pros-box .intro-item{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background-color: #345685;
+	transform: translateY(-100%);
+	transition-property: transform, opacity, visibility;
+	transition-duration: .5s;
+	/* transition-timing-function: ease-in; */
+	opacity: 0;
+	visibility: hidden;
+}
+.pros-box li {
+	transition: .4s;
+}
+.pros-box li:hover {
+	box-shadow: none;
+}
+.pros-box li:hover .intro-item{
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+.pros-box li:hover img{
+	transform: scale(.4) translateY(-20px);
+}

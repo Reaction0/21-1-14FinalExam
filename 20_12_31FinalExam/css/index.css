@@ -1,11 +1,20 @@
-html {
-  scroll-behavior: smooth;
-}
 
 /* 轮播图 */
 #carousel {
   position: relative;
   z-index: 10;
+  background-image: linear-gradient(to right, rgb(131 189 255), #ffdeb5);
+  
+  min-height: 100vh;
+}
+#carousel::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(0 0 0 / .3);
 }
 
 .carousel-indicators {
@@ -82,6 +91,7 @@ html {
   width: auto;
   height: auto;
   overflow: visible;
+  white-space: nowrap;
 }
 
 
@@ -116,6 +126,7 @@ html {
   transition: .4s;
   border-radius: 4px;
   position: absolute;
+  z-index: 11;
   top: 50%;
   transform: translateY(-50%);
   padding: 30px 15px;
@@ -134,33 +145,7 @@ html {
 
 /* 轮播图End */
 
-.module-box .title {
-  -webkit-clip-path: inset(0 50% -10% 50%);
-  clip-path: inset(0 50% -10% 50%);
-  user-select: none;
-}
 
-.title.showIn {
-  animation: clipAppear 3s forwards;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes clipAppear {
-  75% {
-    -webkit-clip-path: inset(0 0 -10% 0);
-    clip-path: inset(0 0 -10% 0);
-  }
-
-  90% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    -webkit-clip-path: inset(0 0 -10% 0);
-    clip-path: inset(0 0 -10% 0);
-    transform: scale(1);
-  }
-}
 
 /* 展示产品 */
 .sub-box {
@@ -328,13 +313,13 @@ html {
 
 
 
-/* 公司理念 */
-.company-philosophy>.container {
+/* 公司业务 */
+.company-business>.container {
   width: auto;
   max-width: 1200px;
 }
 
-.company-philosophy {
+.company-business {
   padding: 80px 0;
   background-image: url(../images/IMG_7387.jpg);
   background-repeat: no-repeat;
@@ -343,7 +328,7 @@ html {
   position: relative;
 }
 
-.company-philosophy::before {
+.company-business::before {
   content: "";
   background-color: rgba(0, 0, 0, .8);
   /* filter: blur(5px); */
@@ -354,58 +339,58 @@ html {
   left: 0;
 }
 
-.company-philosophy .inner-box {
+.company-business .inner-box {
   opacity: .99;
 }
 
-.company-philosophy .title {
+.company-business .title {
   filter: invert(1);
 }
 
-.company-philosophy .title .sub-box {
+.company-business .title .sub-box {
   border-color: #000;
 }
 
-.company-philosophy .inner-box {
+.company-business .inner-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
 
 @media screen and (max-width: 992px) {
-  .company-philosophy .inner-box {
+  .company-business .inner-box {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.company-philosophy .item {
+.company-business .item {
   user-select: none;
   color: var(--white);
 }
 
-.company-philosophy .item:nth-child(1),
-.company-philosophy .item:nth-child(2),
-.company-philosophy .item:nth-child(3) {
+.company-business .item:nth-child(1),
+.company-business .item:nth-child(2),
+.company-business .item:nth-child(3) {
   --animate-delay: 0.1s;
 }
 
-.company-philosophy .item:nth-child(4),
-.company-philosophy .item:nth-child(5),
-.company-philosophy .item:nth-child(6) {
+.company-business .item:nth-child(4),
+.company-business .item:nth-child(5),
+.company-business .item:nth-child(6) {
   --animate-delay: 0.2s;
 }
 
-.company-philosophy .item i {
+.company-business .item i {
   display: block;
   line-height: 120px;
   font-size: 40px;
 }
 
-.company-philosophy .item:hover {
+.company-business .item:hover {
   color: var(--theme);
 }
 
-/* 公司理念End */
+/* 公司业务End */
 
 /* 关于我们 */
 .about-us {
@@ -451,11 +436,6 @@ html {
 
 .server-scope .more-btn {
   --animate-delay: 0.1s;
-}
-.server-scope .title>.subtitle {
-  display: block;
-  padding-top: 20px;
-  color: var(--gray4);
 }
 
 .server-scope .inner-box {
@@ -914,42 +894,6 @@ html {
 
 
 
-/* 查看更多 */
-.more-btn a {
-  display: inline-block;
-  padding: 10px 20px;
-  box-shadow: 0 2px 12px #e2e2e2;
-  background-color: rgb(201 138 60 / .6);
-  border-radius: 3px;
-  transition-property: background-color;
-  color: var(--white);
-  font-size: 14px;
-  position: relative;
-}
-
-.more-btn a::before {
-  content: attr(data-words);
-}
-
-.more-btn a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgb(201 138 60 / 1);
-  z-index: -1;
-  transition-property: transform, width;
-  transition: .16s;
-}
-
-.more-btn a:hover::after {
-  left: 0;
-  width: 100%;
-}
-
-/* 查看更多End */
 
 
 /* 锚点链接 */

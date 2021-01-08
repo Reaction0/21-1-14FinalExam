@@ -1,0 +1,169 @@
+.about-title {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  border-bottom: 1px solid var(--theme);
+  position: relative;
+  margin-bottom: 50px;
+
+}
+
+.about-title h2 {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  font-family: "微软雅黑", "宋体";
+  font-size: 30px;
+  color: #b49159;
+
+
+}
+
+.about-title h2 span {
+  background: #fff;
+  padding: 0 20px;
+}
+
+
+
+hr {
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid var(--theme);
+}
+
+.row-1 {
+  padding-left: 150px;
+  padding-right: 15px;
+  float: left;
+}
+
+.row-2 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: right;
+
+}
+
+.row-3 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+
+}
+
+.li-title {
+  padding-bottom: 10px;
+  font-family: "微软雅黑", "宋体";
+  font-size: 22px;
+  color: var(--theme);
+}
+
+.li-des {
+  padding-top: 10px;
+  border-top: 1px solid var(--theme);
+  padding-bottom: 15px;
+}
+
+.about-two {
+  text-align: center;
+  padding-top: 72px;
+}
+
+.box {
+  width: 250px;
+  height: 360px;
+  line-height: 150px;
+  text-align: center;
+  border: 1px solid transparent;
+  /* margin: 50px; */
+  float: left;
+  font-size: 26px;
+
+}
+
+.is1 {
+  width: 250px;
+  height: 250px;
+}
+
+.box1 {
+
+  width: 250px;
+  height: 300px;
+  line-height: 120px;
+  text-align: center;
+  border: 1px solid transparent;
+  margin: 60px;
+  float: left;
+  font-size: 25px;
+}
+
+
+/* 公司简介 */
+.company-brief>.container {
+  width: auto;
+  max-width: 1200px;
+}
+
+.company-brands-exp .art-content p {
+  font-family: "宋体";
+  text-indent: 2em;
+  line-height: 1.8;
+  color: var(--gray3);
+}
+
+/* 公司理念 */
+.company-philosophy>.container {
+  width: auto;
+  max-width: 1200px;
+}
+
+.company-philosophy .inner-box {
+  display: grid;
+  grid-template-columns: minmax(200px, 750px) auto;
+  grid-gap: 0 30px;
+  align-items: center;
+}
+@media screen and (max-width: 992px){
+  .company-philosophy .inner-box {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
+ 
+}
+/* 公司理念End */
+
+
+/* 业务领域 */
+.company-business > .container {
+  width: auto;
+  max-width: 1200px;
+}
+.company-business .inner-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.company-business .item:hover {
+  transition: all 2s ease;
+  transform: scale(1.5);
+}
+/* 业务领域End */
+
+/* 荣誉证书 */
+.company-honor > .container {
+  width: auto;
+  max-width: 1200px;
+}
+.company-honor .box1 {
+  --animate-delay: 0.2s;
+}
+/* 荣誉证书End */
