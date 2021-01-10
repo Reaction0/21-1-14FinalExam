@@ -1,0 +1,189 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*.one{background-color: #326696;
+	margin: 0px;
+	overflow: hidden;
+	font-family:Monospace;
+	font-size:13px;
+	font-weight: bold;
+	text-align:center;
+	height: 100vh;
+    animation: myfirst 10s ease 2s infinite alternate;
+    background-repeat: no-repeat;}
+.one .two{
+  position: relative;
+	z-index: 2;}
+.two{
+  width: 250px;
+  height: 250px;
+	background-image:url(../../../微信图片_20210110140549.jpg);
+  background-size: 250px 250px;
+	overflow: hidden;
+	background-position: right;
+	background-repeat: no-repeat;
+	border-radius:50%;
+	text-align: inherit;
+}*/
+      .Wu-body{
+  --self-theme: #f3c348;
+}
+
+.Wu-avatar{
+  height: 100vh;
+  background-color: #326696;
+}
+.self-avatar {
+  position: relative;
+  z-index: 2;
+}
+.self-avatar .header{
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-repeat: no-repeat
+  background-position: center;
+  background-size: 300px 300px;
+  background-image:url(../../../微信图片_20210110140549.jpg); 
+  transition: background-image 1s;
+	animation: my 2s ease 1s infinite alternate;/*调用动画*/
+	}
+	@keyframes my{
+	0%   {/* right: 200px;left:200px; top:200px;}
+    25%  { left:200px; top:200px;}
+     50%  { left:200px; top:200px;*/transform: scale(1.25);}
+    75%  /*l{ left:200px; top:200px;}
+    100% { left:200px; top:200px;}*/
+}
+.self-avatar::after{
+	
+  content: "吴 嘉 豪";
+  font-size: 40px;
+  color: var(--self-theme);
+  font-family: "Poppins", "Arial";
+  line-height: 200px;
+
+  text-shadow: 0 0 5px var(--self-theme);
+}
+
+
+.box{
+	width: 1600px;
+	height: 720px;	
+	float:left;
+}
+.box ,.box1, .a1,.a5{
+	float: left;
+}
+.box1{
+
+	width: 200px;
+	height: 200px;
+	margin-top: 120px;
+	margin-left: 80px;
+	margin-right: 100px;
+	margin-bottom: 50px;
+	position: relative;
+}
+.box1 p{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	line-height: 200px;
+	color:#DC8F1E;
+	font-size: 24px;
+	opacity: 0;
+	transition: 0.4s;
+}
+.box1:hover p{
+	opacity: 1;
+}
+/*.box1 {
+	
+ width: 200px;
+	height: 200px;
+	line-height: 120px;
+	text-align: center;
+	border: 1px solid transparent;
+	margin: 60px;
+	float: left;
+	font-size: 25px;}
+		.a5{
+			margin-left: 150px;
+		}
+.a1{
+	margin-left: 150px;
+	float: left;
+}
+.a4 {
+	margin-left: 150px;
+	float: left;
+}
+
+.a3{margin-left: 150px;
+float: left;}
+.a2{margin-left: 100px;
+float: left;}
+.a6{
+	margin-left: 150px;
+	float: left;
+}
+.a7{
+	margin-left: 150px;
+	float: left;
+}*/
+
+.box1:hover img {
+			 filter:blur(5px);
+			}
+.1{
+	color: #4b4b4b;
+}
+
+
+.fo {
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  float: left;
+}
+
+.fo img {
+  border-radius: 50%;
+
+}
+
+.fl {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  text-align: center;
+  float: right;
+  font-size: 50px;
+  color: #8594EA;
+  font-family: "楷体";
+}
+
+.fl img {
+
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.oo ul li {
+  font-size: 60px;
+  color: #BB5DE9;
+  font-family: "华文楷体";
+
+}  
+
+
+   
